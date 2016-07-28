@@ -1,19 +1,16 @@
 package com.ps13.gridview.fragment;
 
-
-import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.BaseAdapter;
 import android.widget.GridView;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.ps13.gridview.R;
+import com.ps13.gridview.adapter.ImageAdapter;
 
 /**
  * Created by nuuneoi on 11/16/2014.
@@ -83,79 +80,5 @@ public class MainFragment extends Fragment {
         if (savedInstanceState != null) {
             // Restore Instance State here
         }
-    }
-
-    public class ImageAdapter extends BaseAdapter {
-        private Context mContext;
-
-        public ImageAdapter(Context c) {
-            mContext = c;
-        }
-
-        public int getCount() {
-            return mThumbIds.length;
-        }
-
-        public Object getItem(int position) {
-            return null;
-        }
-
-        public long getItemId(int position) {
-            return 0;
-        }
-
-        public View getView(int position, View convertView, ViewGroup parent) {
-            ImageView imageView = new ImageView(mContext);
-            imageView.setLayoutParams(new GridView.LayoutParams(85, 85));
-            imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-            imageView.setPadding(8,8,8,8);
-            imageView.setImageResource(mThumbIds[position]);
-            return imageView;
-        }
-
-        private Integer[] mThumbIds = {
-                R.mipmap.ic_launcher,
-                R.mipmap.ic_launcher,
-                R.mipmap.ic_launcher,
-                R.mipmap.ic_launcher,
-                R.mipmap.ic_launcher,
-                R.mipmap.ic_launcher,
-                R.mipmap.ic_launcher,
-                R.mipmap.ic_launcher,
-                R.mipmap.ic_launcher,
-                R.mipmap.ic_launcher,
-                R.mipmap.ic_launcher,
-                R.mipmap.ic_launcher,
-                R.mipmap.ic_launcher,
-                R.mipmap.ic_launcher,
-                R.mipmap.ic_launcher,
-                R.mipmap.ic_launcher,
-                R.mipmap.ic_launcher,
-                R.mipmap.ic_launcher,
-                R.mipmap.ic_launcher,
-                R.mipmap.ic_launcher,
-                R.mipmap.ic_launcher,
-                R.mipmap.ic_launcher,
-                R.mipmap.ic_launcher,
-                R.mipmap.ic_launcher,
-                R.mipmap.ic_launcher,
-                R.mipmap.ic_launcher,
-                R.mipmap.ic_launcher,
-                R.mipmap.ic_launcher,
-                R.mipmap.ic_launcher,
-                R.mipmap.ic_launcher,
-                R.mipmap.ic_launcher,
-                R.mipmap.ic_launcher,
-                R.mipmap.ic_launcher,
-                R.mipmap.ic_launcher,
-                R.mipmap.ic_launcher,
-                R.mipmap.ic_launcher,
-                R.mipmap.ic_launcher,
-                R.mipmap.ic_launcher,
-                R.mipmap.ic_launcher,
-                R.mipmap.ic_launcher,
-                R.mipmap.ic_launcher,
-                R.mipmap.ic_launcher,
-        };
     }
 }
